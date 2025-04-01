@@ -1,0 +1,33 @@
+GET http://localhost:3000/contacts HTTP/1.1
+
+###
+//Add a new contact
+POST http://localhost:3000/contacts HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "faker@notreal.com",
+    "favoriteColor": "blue",
+    "birthday": "12/12/2012"
+}
+###
+//Get a specific contact by ID
+GET http://localhost:3000/contacts/67ebf00ff83be1fc35b2ad69 HTTP/1.1
+
+###
+//Update a contact
+PUT http://localhost:3000/contacts/67ebf00ff83be1fc35b2ad69 HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "Jane",
+    "lastName": "Doe",
+    "email": "notreal@faker.com",
+    "favoriteColor": "red",
+    "birthday": "02/23/1990"
+}
+###
+//Delete a contact
+DELETE http://localhost:3000/contacts/67ebf00ff83be1fc35b2ad69 HTTP/1.1
